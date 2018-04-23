@@ -73,9 +73,9 @@ class Cluster(object):
                 if len(other_NeighborPts) >= self.MinPts:
                     NeighborPts = NeighborPts + other_NeighborPts
 
-                for c in self.clusters:
-                    if any(loc['id'] == np['id'] for loc in c):
-                        is_in_cluster = True
+            for c in self.clusters:
+                if any(loc['id'] == np['id'] for loc in c):
+                    is_in_cluster = True
 
             if not is_in_cluster:
                 cluster.append(np)
